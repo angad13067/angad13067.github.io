@@ -1,0 +1,458 @@
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* RESET */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* RESET */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* RESET */
+[role="list"] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* RESET */
+body {
+  min-block-size: 100vh;
+  line-height: 1.6;
+}
+
+/* RESET */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* RESET */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* RESET */
+p,
+li {
+  text-wrap: pretty;
+}
+
+/* RESET */
+img,
+picture {
+  max-inline-size: 100%;
+  display: block;
+}
+
+/* RESET */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+* {
+  border: solid white 1px;
+  color: white;
+
+  --ff-retro: "Press Start 2P", monospace, serif;
+  --ff-mono: monospace, serif;
+  --ff-inter: "Inter Tight", monospace, serif;
+
+  /*font weights*/
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /*Type scale*/
+  --fs-100: 0.75rem; /* 12px  - small labels / metadata */
+  --fs-200: 0.875rem; /* 14px  - small body */
+  --fs-300: 1rem; /* 16px  - base body */
+  --fs-400: 1.125rem; /* 18px  - comfy body / lead */
+  --fs-500: 1.5rem; /* 24px  - subhead */
+  --fs-600: 2rem; /* 32px  - functional headline */
+  --fs-700: clamp(2.5rem, 5vw, 3.5rem); /* ~40–56px main headline */
+
+  /*Line heights tight for headings and comfy for text*/
+  --lh-tight: 1.1;
+  --lh-comfy: 1.5;
+}
+body {
+  margin: 0;
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+.page-content {
+  position: relative;
+  z-index: 5;
+  /*trbl*/
+  margin: 15% 10% 10% 10%;
+}
+
+.hero {
+  border: solid yellow 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*trbl*/
+  /*padding: 15% 10% 10% 10%;*/
+}
+
+.neon-container {
+  flex-direction: column;
+  align-items: left;
+  border: solid red 1px;
+}
+
+.title {
+  font-family: var(--ff-retro);
+  font-size: var(--fs-500);
+  line-height: var(--lh-comfy);
+}
+
+/*NEON*/
+.neon-text {
+  color: #fff;
+  text-shadow:
+    0 0 5px #ff005e,
+    0 0 10px #ff005e,
+    0 0 20px #ff005e,
+    0 0 40px #ff005e,
+    0 0 80px #ff005e;
+  /*speed (1.5 def)*/
+  animation: glow 1.3s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow:
+      0 0 5px #ff005e,
+      0 0 10px #ff005e,
+      0 0 20px #ff005e,
+      0 0 40px #ff005e,
+      0 0 80px #ff005e;
+  }
+  100% {
+    text-shadow:
+      0 0 10px #00d4ff,
+      0 0 20px #00d4ff,
+      0 0 40px #00d4ff,
+      0 0 80px #00d4ff,
+      0 0 160px #00d4ff;
+  }
+}
+
+.hero-subtitle {
+  padding-top: 5%;
+  font-family: var(--ff-inter);
+  font-size: var(--fs-500);
+  line-height: var(--lh-comfy);
+}
+
+.hero-subtitle-desc {
+  padding-top: 5%;
+  font-family: var(--ff-inter);
+  font-size: var(--fs-400);
+  line-height: var(--lh-comfy);
+}
+
+/* ============================= */
+/* lbg */
+/* ============================= */
+
+.lofi-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+
+/* Pixel grid / screen texture */
+.lofi-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.05) 50%, transparent 50%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 50%, transparent 50%);
+  background-size: 6px 6px;
+  opacity: 0.35;
+  z-index: 1;
+}
+
+/* ============================= */
+/* stars */
+/* ============================= */
+
+.lofi-bg .stars {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.lofi-bg .star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 4s infinite;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ============================= */
+/* rain */
+/* ============================= */
+
+.lofi-bg .rain {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.lofi-bg .rain::before {
+  content: "";
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  width: var(--drop-width, 4px);
+  height: var(--drop-height, 18px);
+  background: currentColor;
+  color: rgba(214, 235, 255, 0.78);
+  image-rendering: pixelated;
+  box-shadow:
+    6vw 8vh 0 currentColor,
+    14vw 34vh 0 currentColor,
+    23vw 64vh 0 currentColor,
+    31vw 18vh 0 currentColor,
+    39vw 84vh 0 currentColor,
+    47vw 44vh 0 currentColor,
+    55vw 12vh 0 currentColor,
+    63vw 72vh 0 currentColor,
+    71vw 28vh 0 currentColor,
+    79vw 92vh 0 currentColor,
+    87vw 52vh 0 currentColor,
+    95vw 6vh 0 currentColor,
+    10vw 126vh 0 currentColor,
+    18vw 172vh 0 currentColor,
+    27vw 142vh 0 currentColor,
+    36vw 196vh 0 currentColor,
+    45vw 116vh 0 currentColor,
+    54vw 154vh 0 currentColor,
+    68vw 134vh 0 currentColor,
+    76vw 188vh 0 currentColor,
+    84vw 108vh 0 currentColor,
+    92vw 164vh 0 currentColor;
+  animation: pixel-rain-fall var(--rain-speed, 1.8s) linear infinite;
+  animation-delay: var(--rain-delay, 0s);
+}
+
+.lofi-bg .rain::after {
+  content: "";
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  width: var(--small-drop-width, 3px);
+  height: var(--small-drop-height, 10px);
+  background: currentColor;
+  color: rgba(238, 248, 255, 0.58);
+  image-rendering: pixelated;
+  box-shadow:
+    3vw 46vh 0 currentColor,
+    12vw 96vh 0 currentColor,
+    21vw 22vh 0 currentColor,
+    29vw 76vh 0 currentColor,
+    34vw 2vh 0 currentColor,
+    43vw 58vh 0 currentColor,
+    51vw 98vh 0 currentColor,
+    59vw 36vh 0 currentColor,
+    66vw 66vh 0 currentColor,
+    74vw 14vh 0 currentColor,
+    82vw 82vh 0 currentColor,
+    90vw 40vh 0 currentColor,
+    98vw 70vh 0 currentColor,
+    7vw 150vh 0 currentColor,
+    16vw 118vh 0 currentColor,
+    25vw 182vh 0 currentColor,
+    33vw 136vh 0 currentColor,
+    42vw 168vh 0 currentColor,
+    57vw 122vh 0 currentColor,
+    69vw 158vh 0 currentColor,
+    81vw 198vh 0 currentColor,
+    93vw 148vh 0 currentColor;
+  animation: pixel-rain-fall var(--small-rain-speed, 2.4s) linear infinite;
+  animation-delay: var(--small-rain-delay, -0.7s);
+}
+
+.lofi-bg .rain-one {
+  --drop-width: 4px;
+  --drop-height: 18px;
+  --small-drop-width: 3px;
+  --small-drop-height: 10px;
+  --rain-speed: 1.55s;
+  --small-rain-speed: 2.05s;
+  opacity: 0.9;
+}
+
+.lofi-bg .rain-two {
+  --drop-width: 3px;
+  --drop-height: 14px;
+  --small-drop-width: 2px;
+  --small-drop-height: 8px;
+  --rain-speed: 2.25s;
+  --small-rain-speed: 2.85s;
+  --rain-delay: -0.85s;
+  --small-rain-delay: -1.3s;
+  opacity: 0.65;
+  transform: translateX(34px);
+}
+
+.lofi-bg .rain-three {
+  --drop-width: 5px;
+  --drop-height: 22px;
+  --small-drop-width: 3px;
+  --small-drop-height: 12px;
+  --rain-speed: 1.2s;
+  --small-rain-speed: 1.75s;
+  --rain-delay: -0.35s;
+  --small-rain-delay: -0.95s;
+  opacity: 0.36;
+  transform: translateX(-42px);
+}
+
+@keyframes pixel-rain-fall {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 100vh, 0);
+  }
+}
+
+/* ============================= */
+/* fireflies */
+/* ============================= */
+
+.lofi-bg .fireflies {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 35vh;
+
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.lofi-bg .firefly {
+  position: absolute;
+
+  left: var(--x);
+  bottom: var(--y);
+
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+
+  background: #fff7a8;
+  box-shadow: 0 0 0.8rem 0.25rem rgba(255, 240, 120, 0.9);
+
+  opacity: 0;
+
+  animation:
+    firefly-drift var(--drift-duration) ease-in-out var(--delay) infinite
+      alternate,
+    firefly-flash var(--flash-duration) ease-in-out var(--delay) infinite;
+}
+
+@keyframes firefly-drift {
+  from {
+    transform: translate(0, 0) scale(var(--scale));
+  }
+
+  to {
+    transform: translate(var(--move-x), var(--move-y))
+      scale(calc(var(--scale) * 1.2));
+  }
+}
+
+@keyframes firefly-flash {
+  0%,
+  35%,
+  100% {
+    opacity: 0.1;
+    box-shadow: 0 0 0 0 rgba(255, 240, 120, 0);
+  }
+
+  8%,
+  18% {
+    opacity: 1;
+    box-shadow: 0 0 1rem 0.35rem rgba(255, 240, 120, 0.95);
+  }
+}
+
+/* ============================= */
+/* reduced Motion */
+/* ============================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .lofi-bg .rain::before,
+  .lofi-bg .rain::after {
+    animation-duration: 8s;
+  }
+
+  .lofi-bg .firefly,
+  .lofi-bg .star {
+    animation-duration: 8s;
+  }
+}
