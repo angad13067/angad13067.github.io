@@ -6,7 +6,7 @@ function randomInteger(min, max) {
   return Math.floor(randomNumber(min, max + 1));
 }
 /*200*/
-function createStars(starsContainer, starCount = 10) {
+function createStars(starsContainer, starCount = 20) {
   if (!starsContainer) return;
 
   for (let i = 0; i < starCount; i++) {
