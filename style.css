@@ -88,7 +88,7 @@ select {
   --ff-inter: "Inter Tight", monospace, serif;
 
   /*font weights*/
-  --fw-regular: 400;
+  --fw-light: --fw-regular: 400;
   --fw-medium: 500;
   --fw-semibold: 600;
   --fw-bold: 700;
@@ -116,8 +116,15 @@ body {
   position: relative;
   z-index: 5;
   /*trbl*/
-  margin: 15% 10% 10% 10%;
+  /* margin: 15% 10% 10% 10%; */
 }
+
+/*for section bg card for contrast*/
+/* .constrast-card-bg {
+  border: solid red;
+  background-color: black;
+  z-index: 4;
+} */
 
 .hero {
   border: solid yellow 1px;
@@ -125,9 +132,10 @@ body {
   justify-content: center;
   align-items: center;
   /*trbl*/
-  /*padding: 15% 10% 10% 10%;*/
+  /*contentpadding*/
+  /*rm 10*/
+  margin: 15% 5% 10% 10%;
 }
-
 .neon-container {
   flex-direction: column;
   align-items: left;
@@ -136,7 +144,7 @@ body {
 
 .title {
   font-family: var(--ff-retro);
-  font-size: var(--fs-500);
+  font-size: var(--fs-600);
   line-height: var(--lh-comfy);
 }
 
@@ -183,7 +191,48 @@ body {
   padding-top: 5%;
   font-family: var(--ff-inter);
   font-size: var(--fs-400);
+  font-weight: var(--fw-light);
   line-height: var(--lh-comfy);
+}
+
+.title-section {
+  font-family: var(--ff-inter);
+  font-size: var(--fs-700);
+  font-weight: var(--fw-bold);
+
+  /*contentpadding*/
+  margin: 15% 10% 5% 10%;
+}
+
+.project-card {
+  border: solid 1px orange;
+  background-color: darkblue;
+  margin: 5% 4% 5% 4%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.project-inner-card {
+  border: solid green;
+  padding: 7% 7% 7% 7%;
+}
+
+.project-image {
+  border-radius: 10px;
+  margin-bottom: 4%;
+}
+
+.project-name {
+  margin-bottom: 2%;
+  font-family: var(--ff-inter);
+  font-size: var(--fs-600);
+  font-weight: var(--fw-semibold);
+}
+
+.project-timeline {
+  font-family: var(--ff-inter);
+  font-size: var(--fs-200);
+  font-weight: var(--fw-light);
 }
 
 /* ============================= */
