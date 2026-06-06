@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
@@ -21,15 +25,15 @@
     <div class="lofi-bg" aria-hidden="true">
       <div class="stars"></div>
 
-      <div class="rain rain-one"></div>
+      <!-- <div class="rain rain-one"></div>
       <div class="rain rain-two"></div>
-      <div class="rain rain-three"></div>
+      <div class="rain rain-three"></div> -->
 
       <div class="fireflies"></div>
     </div>
 
     <main class="page-content">
-      <div class="hero">
+      <div class="hero home-content">
         <div class="neon-container">
           <h1 class="title">
             Hi,I'm <span class="neon-text">Angad Singh!</span>
@@ -50,20 +54,22 @@
           <img class="project-image" src="assets/flingesample.png" />
           <h2 class="project-name">Flinge</h2>
           <h4 class="project-timeline">May 2026 - Jun 2026</h4>
-          <div class="project-desc">
-            <ul class="project-list-item">
-              Developed Flinge, a Hinge-style web app for discovering and saving
-              date ideas using an interactive card-swiping interface.
-            </ul>
-            <ul class="project-list-item">
-              Implemented reusable UI components, liked-card state tracking,
-              responsive layouts, and organized JavaScript logic for filtering
-              and managing saved ideas.
-            </ul>
-            <ul class="project-list-item">
-              Designed the project with future full-stack expansion in mind,
-              including database-backed user accounts, saved ideas, and
-              personalized recommendations.
+          <div>
+            <ul class="project-desc" role="list">
+              <li class="project-list-item">
+                Developed Flinge, a Hinge-style web app for discovering and
+                saving date ideas using an interactive card-swiping interface.
+              </li>
+              <li class="project-list-item">
+                Implemented reusable UI components, liked-card state tracking,
+                responsive layouts, and organized JavaScript logic for filtering
+                and managing saved ideas.
+              </li>
+              <li class="project-list-item">
+                Designed the project with future full-stack expansion in mind,
+                including database-backed user accounts, saved ideas, and
+                personalized recommendations.
+              </li>
             </ul>
           </div>
           <div class="project-skills">
@@ -84,8 +90,18 @@
               >PostgreSQL</span
             >
           </div>
-        </div>
-      </div>
+
+          <a
+  class="project-button"
+  href="https://github.com/angad13067"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <i class="fa-brands fa-github"></i>
+  <span class="project-button-text">View on GitHub</span>
+</a>
+
+ 
     </main>
 
     <script src="script.js"></script>
