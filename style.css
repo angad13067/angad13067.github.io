@@ -116,6 +116,19 @@ body {
   overflow-x: hidden;
 }
 
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 4rem 15%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
 .page-content {
   position: relative;
   z-index: 5;
@@ -126,6 +139,52 @@ body {
 .home-content {
 }
 
+.home-page {
+  border: solid white 1px;
+  min-height: 100vh;
+  /*t/b,l,r*/
+  padding: 5rem 15%;
+}
+.hero {
+  border: solid white 1px;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  align-items: flex-end;
+  text-align: right;
+
+  font-family: var(--ff-inter);
+
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-comfy);
+}
+/*fontsie 6 and 3*/
+.hero h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  line-height: 1;
+}
+
+.hero span {
+}
+
+.orange-text {
+  background: linear-gradient(270deg, #df8908 10%, #ff1d15 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+.hero h2 {
+  margin: 1rem 0;
+  margin-left: 30rem;
+  font-size: 2.5rem;
+  line-height: var(--lh-tight);
+}
+
+.hero h3 {
+}
+
 /*for section bg card for contrast*/
 /* .constrast-card-bg {
   border: solid red;
@@ -133,8 +192,8 @@ body {
   z-index: 4;
 } */
 
-.hero {
-  /* border: solid yellow 1px; */
+.heros {
+  border: solid yellow 1px;
   display: flex;
   justify-content: center;
   align-items: center;
