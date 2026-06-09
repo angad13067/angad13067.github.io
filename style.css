@@ -306,7 +306,7 @@ body {
 }
 
 .project-image {
-  border: solid orange;
+  /* border: solid orange; */
   border-radius: 10px;
   margin-bottom: 6%;
 }
