@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Angad Singh</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,85 +29,137 @@
     <div class="lofi-bg" aria-hidden="true">
       <div class="stars"></div>
 
-      <div class="rain rain-one"></div>
+      <!-- <div class="rain rain-one"></div>
       <div class="rain rain-two"></div>
-      <div class="rain rain-three"></div>
+      <div class="rain rain-three"></div> -->
 
       <div class="fireflies"></div>
     </div>
 
     <main class="page-content">
-        <section class="home-page">
+      <section class="home-page" id="about">
         <div class="hero">
-          <h1>
-            Hi,I'm <span class="neon-text">Angad Singh!</span>
-          </h1>
+          <h1>Hi, I'm <span class="neon-text">Angad Singh!</span></h1>
           <h2>
-            I'm an aspiring <span class=" animate-gradient">Computer Engineer</span> based in Montreal.
+            I'm an aspiring <span class="">Computer Engineer</span> based in
+            Montreal.
           </h2>
           <!-- <h3>
             I am interested in full stack development!
           </h3> -->
+
+          <div class="hero-icons">
+            <a
+              href="https://github.com/angad13067"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bx bxl-github"></i>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/angad-singh000/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bx bxl-linkedin-square"></i>
+            </a>
+          </div>
         </div>
-        </section>
-     
+      </section>
 
-      <h2 class="title-section ">Projects</h2>
+      <section>
+        <h2 class="title-section" id="projects">Projects</h2>
 
-      <div class="project-card contrast-card-bg">
-        <div class="project-inner-card">
-          <img class="project-image" src="assets/flingesample.png" />
-          <h2 class="project-name">Flinge</h2>
-          <h4 class="project-timeline">May 2026 - Jun 2026</h4>
-          <div>
-            <ul class="project-desc" role="list">
-              <li class="project-list-item">
-                Developed Flinge, a Hinge-style web app for discovering and
-                saving date ideas using an interactive card-swiping interface.
-              </li>
-              <li class="project-list-item">
-                Implemented reusable UI components, liked-card state tracking,
-                responsive layouts, and organized JavaScript logic for filtering
-                and managing saved ideas.
-              </li>
-              <li class="project-list-item">
-                Designed the project with future full-stack expansion in mind,
-                including database-backed user accounts, saved ideas, and
-                personalized recommendations.
-              </li>
-            </ul>
+        <div class="project-card contrast-card-bg">
+          <div class="project-inner-card">
+            <img class="project-image" src="assets/flingesample.png" />
+            <h2 class="project-name">Flinge</h2>
+            <h4 class="project-timeline">May 2026 - Jun 2026</h4>
+            <div>
+              <ul class="project-desc" role="list">
+                <li class="project-list-item">
+                  Developed Flinge, a Hinge-style web app for discovering and
+                  saving date ideas using an interactive card-swiping interface.
+                </li>
+                <li class="project-list-item">
+                  Implemented reusable UI components, liked-card state tracking,
+                  responsive layouts, and organized JavaScript logic for
+                  filtering and managing saved ideas.
+                </li>
+                <li class="project-list-item">
+                  Designed the project with future full-stack expansion in mind,
+                  including database-backed user accounts, saved ideas, and
+                  personalized recommendations.
+                </li>
+              </ul>
+            </div>
+            <div class="project-skills">
+              <span class="skill-badge">
+                <iconify-icon icon="devicon:html5"></iconify-icon>HTML</span
+              >
+              <span class="skill-badge"
+                ><iconify-icon icon="devicon:css3"></iconify-icon>CSS</span
+              >
+              <span class="skill-badge"
+                ><iconify-icon icon="devicon:nodejs"></iconify-icon
+                >Node.js</span
+              >
+              <span class="skill-badge"
+                ><iconify-icon icon="devicon:express"></iconify-icon
+                >Express</span
+              >
+              <span class="skill-badge"
+                ><iconify-icon icon="devicon:postgresql"></iconify-icon
+                >PostgreSQL</span
+              >
+            </div>
+
+            <a
+              class="project-button"
+              href="https://github.com/angad13067"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-github"></i>
+              <span class="project-button-text">View on GitHub</span>
+            </a>
           </div>
-          <div class="project-skills">
-            <span class="skill-badge">
-              <iconify-icon icon="devicon:html5"></iconify-icon>HTML</span
-            >
-            <span class="skill-badge"
-              ><iconify-icon icon="devicon:css3"></iconify-icon>CSS</span
-            >
-            <span class="skill-badge"
-              ><iconify-icon icon="devicon:nodejs"></iconify-icon>Node.js</span
-            >
-            <span class="skill-badge"
-              ><iconify-icon icon="devicon:express"></iconify-icon>Express</span
-            >
-            <span class="skill-badge"
-              ><iconify-icon icon="devicon:postgresql"></iconify-icon
-              >PostgreSQL</span
-            >
-          </div>
+        </div>
+      </section>
 
-          <a
-  class="project-button"
-  href="https://github.com/angad13067"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <i class="fa-brands fa-github"></i>
-  <span class="project-button-text">View on GitHub</span>
-</a>
-
- 
+      <section class="contact-section">
+        <h2 class="title-section" id="contact">Contact</h2>
+        <h3 class="title-subsection">Get in Touch</h3>
+        <p>
+          I'm glad you stopped by. Whether you have a question, an idea, or just
+          want to say hi, i'd be happy to hear from you.
+        </p>
+      </section>
     </main>
+
+    <nav class="navbar">
+      <div class="navbar-item">
+        <a class="active" href="#about">
+          <i class="bx bx-user"></i>
+          <span>About</span>
+        </a>
+      </div>
+
+      <div class="navbar-item">
+        <a href="#projects">
+          <i class="bx bx-briefcase"></i>
+          <span>Projects</span>
+        </a>
+      </div>
+
+      <div class="navbar-item">
+        <a href="#contact">
+          <i class="bx bx-send"></i>
+          <span>Contact</span>
+        </a>
+      </div>
+    </nav>
 
     <script src="script.js"></script>
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
