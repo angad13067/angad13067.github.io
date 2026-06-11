@@ -311,6 +311,12 @@ body {
   margin-bottom: 6%;
 }
 
+.project-video {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 3%;
+}
+
 .project-name {
   margin-bottom: 3%;
   font-family: var(--ff-inter);
@@ -372,7 +378,7 @@ body {
 .project-button {
   margin-top: 4%;
   width: 100%;
-  padding: 6px;
+  padding: 7px;
   border: solid var(--hinge-white) 1px;
   border-radius: 5px;
 
@@ -384,6 +390,9 @@ body {
   text-decoration: none;
 }
 
+.myicon {
+  font-size: var(--fs-400);
+}
 .project-button-text {
   font-family: var(--ff-inter);
   font-size: var(--fs-300);
@@ -409,7 +418,22 @@ body {
   font-size: var(--fs-400);
   font-weight: var(--fw-regular);
   line-height: var(--lh-comfy);
-  padding-bottom: 5rem;
+}
+
+.footer {
+  padding: 1rem 0rem 6rem 0rem;
+  /* border: solid red 1px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer p {
+  font-family: var(--ff-inter);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-comfy);
 }
 
 .navbar {
