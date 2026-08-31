@@ -22,7 +22,7 @@ function createStars(starsContainer, starCount = 20) {
   }
 }
 
-/*defauot count 18*/
+/*default count 18*/
 function createBottomFireflies(fireflyContainer, fireflyCount = 8) {
   if (!fireflyContainer) return;
 
@@ -54,6 +54,15 @@ function createBottomFireflies(fireflyContainer, fireflyCount = 8) {
     fireflyContainer.appendChild(firefly);
   }
 }
+
+const rainToggle = document.querySelector("#rain-toggle");
+const lofiBackground = document.querySelector(".lofi-bg");
+
+rainToggle.addEventListener("click", () => {
+  const rainIsOff = lofiBackground.classList.toggle("rain-disabled");
+
+  rainToggle.setAttribute("aria-pressed", String(!rainIsOff));
+});
 
 function initLofiBackgrounds() {
   const backgrounds = document.querySelectorAll(".lofi-bg");

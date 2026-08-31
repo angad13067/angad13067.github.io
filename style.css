@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Inter Tight";
+  src: url("assets/fonts/InterTight-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("assets/fonts/PressStart2P-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("assets/fonts/Quicksand-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+}
+
 /* RESET */
 *,
 *::before,
@@ -135,6 +159,7 @@ body {
   padding: 1rem 15%;
   /* padding: 5rem, 15%, 5rem, 15%; */
 }
+
 .hero {
   /* border: solid red 1px; */
   display: flex;
@@ -550,12 +575,35 @@ body {
 /* rain */
 /* ============================= */
 
+/*to toggle rain on and off*/
+.neon-toggle {
+  appearance: none;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Hide every rain layer when rain is disabled */
+.lofi-bg.rain-disabled .rain {
+  opacity: 0;
+}
+
+/* Keyboard-accessible focus indicator */
+.neon-toggle:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 0.15em;
+  border-radius: 0.1em;
+}
+
 .lofi-bg .rain {
   position: fixed;
   inset: 0;
   overflow: hidden;
   pointer-events: none;
   z-index: 1;
+  transition: opacity 1.5s ease-in-out;
 }
 
 .lofi-bg .rain::before {
