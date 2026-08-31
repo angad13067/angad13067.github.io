@@ -578,23 +578,25 @@ body {
 /*to toggle rain on and off*/
 .neon-toggle {
   appearance: none;
+  -webkit-appearance: none;
+
+  display: inline;
+  margin: 0;
   padding: 0;
   border: 0;
+  border-radius: 0;
   background: transparent;
+  box-shadow: none;
+
   font: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-align: inherit;
+  vertical-align: baseline;
+
   cursor: pointer;
-}
-
-/* Hide every rain layer when rain is disabled */
-.lofi-bg.rain-disabled .rain {
-  opacity: 0;
-}
-
-/* Keyboard-accessible focus indicator */
-.neon-toggle:focus-visible {
-  outline: 2px solid white;
-  outline-offset: 0.15em;
-  border-radius: 0.1em;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .lofi-bg .rain {
@@ -724,6 +726,11 @@ body {
   to {
     transform: translate3d(0, 100vh, 0);
   }
+}
+
+/* Hide every rain layer when rain is disabled */
+.lofi-bg.rain-disabled .rain {
+  opacity: 0;
 }
 
 /* ============================= */
