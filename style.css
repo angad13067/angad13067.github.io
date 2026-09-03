@@ -850,3 +850,76 @@ body {
   padding-block: 7%;
   padding-inline: var(--project-card-bleed);
 }
+
+/* ================================================= */
+/* RESPONSIVE DESKTOP LAYOUT                         */
+/* Only applies to screens that are 900px or wider   */
+/* ================================================= */
+
+@media (min-width: 900px) {
+  /* Prevent the top navbar from overlapping the hero */
+  .home-page {
+    padding-top: 6rem;
+  }
+
+  /* Create the two-column project card layout */
+  .project-inner-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(2rem, 5vw, 5rem);
+    padding-block: clamp(2rem, 4vw, 4rem);
+    padding-inline: clamp(1.5rem, 4vw, 4rem);
+  }
+
+  /* Place the project description in the left column */
+  .project-details {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+  }
+
+  /* Place the project image or video in the right column */
+  .project-image,
+  .project-video {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  /* Allow project buttons to appear next to each other */
+  .project-details .project-button {
+    display: inline-flex;
+    width: auto;
+    margin-right: 0.75rem;
+  }
+
+  /* Move the navbar from the bottom to the top-right */
+  .navbar {
+    width: auto;
+    top: 1.5rem;
+    right: var(--site-gutter);
+    bottom: auto;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+  }
+
+  /* Remove the mobile navbar item spacing */
+  .navbar-item {
+    padding: 0;
+  }
+
+  /* Display each navbar icon and label horizontally */
+  .navbar-item a {
+    flex-direction: row;
+    padding: 0.5rem 0.75rem;
+  }
+
+  /* Make the desktop navbar icons slightly smaller */
+  .navbar i {
+    font-size: 1.5em;
+  }
+}
